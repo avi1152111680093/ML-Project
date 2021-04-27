@@ -1,2 +1,2 @@
 # ML-Project
-Based on Clustering Method, (DBSCAN)
+Based on Clustering Method
