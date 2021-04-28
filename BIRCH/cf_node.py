@@ -2,9 +2,11 @@ from math import sqrt
 import numpy as np
 from copy import copy
 
-UNDEFINED = 0
-LEAF_NODE = 1
-NON_LEAF_NODE = 2
+# Various Types of A CF Node
+class CFType:
+    UNDEFINED = 0
+    LEAF_NODE = 1
+    NON_LEAF_NODE = 2
 
 # Returns the Linear Sum of Data Points
 def linear_sum (dp):
@@ -76,11 +78,11 @@ class CFNode:
     def __init__(self, cf, parent):
         self.cf = copy(cf)
         self.parent = parent
-        self.type_node = UNDEFINED
+        self.type_node = CFType.UNDEFINED
 
     def get_distance (self, cf_node):
         return self.cf.get_distance (cf_node.cf)
 
-dp = [[1,2,3],[5,6,7],[3,0,1]]
-cf = CF (3, linear_sum(dp), square_sum(dp))
-c = CFNode (cf, None)
+# dp = [[1,2,3],[5,6,7],[3,0,1]]
+# cf = CF (3, linear_sum(dp), square_sum(dp))
+# c = CFNode (cf, None)
